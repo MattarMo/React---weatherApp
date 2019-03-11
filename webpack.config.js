@@ -6,7 +6,7 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 const SRC_DIR = path.resolve(__dirname, 'src');
 const DIST_DIR = path.resolve(__dirname, 'dist');
-const NODE_ENV = process.env.NODE_ENV || 'production';
+const NODE_ENV = 'development'; //process.env.NODE_ENV || 'production';
 
 const config = {
   mode: NODE_ENV,
