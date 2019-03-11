@@ -3,9 +3,9 @@ import { Link } from 'react-router-dom'; //use for Link tag instead of a tag
 
 const Footer = () => {
   return (
-    <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
+    <nav className="navbar navbar-expand-lg navbar-dark bg-dark fixed-bottom">
       <Link to="/" className="navbar-brand">
-        Weather
+        Footer
       </Link>
       <button
         className="navbar-toggler"
@@ -26,7 +26,7 @@ const Footer = () => {
             </Link>
           </li>
           <li className="nav-item">
-            <Link to="/login-form" className="nav-link">
+            <Link to="/" className="nav-link">
               Login form
             </Link>
           </li>
