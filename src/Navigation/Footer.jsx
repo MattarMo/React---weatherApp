@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'; //use for Link tag instead of a tag
 
 const Footer = () => {
   return (
-    <nav className="navbar navbar-expand-lg navbar-dark bg-dark fixed-bottom">
+    <nav className="navbar navbar-expand-lg navbar-dark bg-primary fixed-bottom">
       <Link to="/" className="navbar-brand">
         Footer
       </Link>

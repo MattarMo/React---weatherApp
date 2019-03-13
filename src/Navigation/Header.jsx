@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'; //use for Link tag instead of a tag
 
 const HeaderNavBar = () => {
   return (
-    <nav className="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <nav className="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
       <Link to="/" className="navbar-brand">
         Weather
       </Link>
@@ -21,7 +21,7 @@ const HeaderNavBar = () => {
       <div className="collapse navbar-collapse" id="navbarNav">
         <ul className="navbar-nav">
           <li className="nav-item">
-            <Link to="/current-weather" className="nav-link">
+            <Link to="/" className="nav-link">
               Current Weather
             </Link>
           </li>
