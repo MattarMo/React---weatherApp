@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import EnterLocationForecast from './EnterLocationForecast.jsx';
-import ForecastDisplay from './ForecastDisplay.jsx';
+import DisplayForecast from './DisplayForecast.jsx';
 
 const API_KEY = '3958ce557d2539d832f7953ea777aa82';
 
@@ -9,7 +9,7 @@ export default class Forcast extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      title: 'Get your 5 day forecast',
+      title: 'Get your 5 day Forecast',
       forecastData: [],
       error: undefined
     };
@@ -51,7 +51,7 @@ export default class Forcast extends Component {
           title={this.state.title}
           forecastGetWeatherCall={this.forecastGetWeatherCall}
         />
-        <ForecastDisplay
+        <DisplayForecast
           forecastData={this.state.forecastData}
           error={this.state.error}
         />
