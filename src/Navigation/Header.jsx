@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom'; //use for Link tag instead of a tag
+import { Link } from 'react-router-dom';
 
 const HeaderNavBar = () => {
   return (
