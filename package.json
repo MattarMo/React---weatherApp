@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "NODE_ENV=development webpack-dev-server"
+    "dev": "webpack-dev-server"
   },
   "author": "",
   "license": "MIT",
@@ -36,6 +36,8 @@
     "jquery": "^3.3.1",
     "popper.js": "^1.14.7",
     "react": "^16.8.1",
-    "react-dom": "^16.8.1"
+    "react-dom": "^16.8.1",
+    "react-router": "^4.3.1",
+    "react-router-dom": "^4.3.1"
   }
 }
