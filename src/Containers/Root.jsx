@@ -3,7 +3,6 @@ import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import Header from '../Navigation/Header.jsx';
 import Forecast from '../Components/ForeCastWeather/Forecast.jsx';
 import Weather from '../Components/CurrentWeather/Weather.jsx';
-//import Footer from '../Navigation/Footer.jsx';
 import ErrorPath from '../components/ErrorPath.jsx';
 
 export default class Root extends Component {
