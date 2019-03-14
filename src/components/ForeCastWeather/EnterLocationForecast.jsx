@@ -32,7 +32,7 @@ const EnterLocationForecast = props => {
 
 EnterLocationForecast.propTypes = {
   title: PropTypes.string.isRequired,
-  forecastGetWeatherCall: PropTypes.func
+  forecastGetWeatherCall: PropTypes.func.isRequired
 };
 
 export default EnterLocationForecast;
