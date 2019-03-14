@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 const EnterLocation = props => {
   return (
     <div className="container">
-      <h2 className="align-text-top">{props.title}</h2>
+      <h2>{props.title}</h2>
       <form onSubmit={props.currentGetWeatherCall}>
         <div className="form-group">
           <label htmlFor="City">City</label>
