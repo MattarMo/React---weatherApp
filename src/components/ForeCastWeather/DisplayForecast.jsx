@@ -1,9 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const ForecastDisplay = props => {
-  console.log(props.forecastData);
-
+const DisplayForecast = props => {
   return (
     <div className="container">
       {props.error && <p className="text-danger">{props.error}</p>}
@@ -13,6 +11,7 @@ const ForecastDisplay = props => {
             <th scope="col">Date/Time</th>
             <th scope="col">Temperature</th>
             <th scope="col">WeatherIcon</th>
+          </tr>
         </thead>
         <tbody>
           {props.forecastData.map(forecast => {
@@ -37,9 +36,9 @@ const ForecastDisplay = props => {
   );
 };
 
-ForecastDisplay.propTypes = {
+DisplayForecast.propTypes = {
   forecastData: PropTypes.array.isRequired,
   error: PropTypes.string
 };
 
-export default ForecastDisplay;
+export default DisplayForecast;
