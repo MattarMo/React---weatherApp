@@ -13,7 +13,6 @@ const ForecastDisplay = props => {
             <th scope="col">Date/Time</th>
             <th scope="col">Temperature</th>
             <th scope="col">WeatherIcon</th>
-          </tr>
         </thead>
         <tbody>
           {props.forecastData.map(forecast => {
