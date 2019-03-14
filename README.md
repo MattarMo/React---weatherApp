@@ -1,6 +1,6 @@
 # Weather Application
 
-## Languages/Frameworks Used
+## Languages/Frameworks
   * Javascript
   * React 
   * Babel, Bootstrap, prettier, webpack
@@ -10,7 +10,7 @@
   * Get a forecast over 5 days/3 hours of the user's weather based on location
       * the focus was more on functionality rather than design
 
-## Api(s) Used
+## Api(s)
   * https://openweathermap.org/current - API for current weather
   * https://openweathermap.org/forecast5 - API for weather forecast 
   
