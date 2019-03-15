@@ -1,0 +1,246 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Forecast Component Forecast component matches snapshot 1`] = `
+<div>
+  <div
+    className="container"
+  >
+    <h2
+      className="align-text-top"
+    >
+      Get your 5 day Forecast
+    </h2>
+    <form
+      onSubmit={[Function]}
+    >
+      <div
+        className="form-group"
+      >
+        <label
+          htmlFor="City"
+        >
+          City
+        </label>
+        <input
+          className="form-control"
+          name="city"
+          placeholder="Enter your city"
+          type="text"
+        />
+      </div>
+      <div
+        className="form-group"
+      >
+        <label
+          htmlFor="country"
+        >
+          Country
+        </label>
+        <input
+          className="form-control"
+          name="country"
+          placeholder="Enter your country"
+          type="text"
+        />
+      </div>
+      <button
+        className="btn btn-primary btn-"
+      >
+        Get Current Weather
+      </button>
+    </form>
+  </div>
+  <div
+    className="container"
+  >
+    <table
+      className="table"
+    >
+      <thead>
+        <tr>
+          <th
+            scope="col"
+          >
+            Date/Time
+          </th>
+          <th
+            scope="col"
+          >
+            Temperature
+          </th>
+          <th
+            scope="col"
+          >
+            WeatherIcon
+          </th>
+        </tr>
+      </thead>
+      <tbody />
+    </table>
+  </div>
+</div>
+`;
+
+exports[`Forecast Component Weather component matches snapshot 1`] = `
+<div>
+  <div
+    className="container"
+  >
+    <h2>
+      Get your Current Weather for today
+    </h2>
+    <form
+      onSubmit={[Function]}
+    >
+      <div
+        className="form-group"
+      >
+        <label
+          htmlFor="City"
+        >
+          City
+        </label>
+        <input
+          className="form-control"
+          name="city"
+          placeholder="Enter your city"
+          type="text"
+        />
+      </div>
+      <div
+        className="form-group"
+      >
+        <label
+          htmlFor="country"
+        >
+          Country
+        </label>
+        <input
+          className="form-control"
+          name="country"
+          placeholder="Enter your country"
+          type="text"
+        />
+      </div>
+      <button
+        className="btn btn-primary"
+      >
+        Get Current Weather
+      </button>
+    </form>
+  </div>
+  <div
+    className="container"
+  >
+    <table
+      className="table"
+    >
+      <thead>
+        <tr>
+          <th
+            scope="col"
+          >
+            Temperature
+          </th>
+          <th
+            scope="col"
+          >
+            Description
+          </th>
+          <th
+            scope="col"
+          >
+            WeatherIcon
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr
+          className="table"
+        />
+      </tbody>
+    </table>
+  </div>
+</div>
+`;
+
+exports[`Forecast Component matches snapshot 1`] = `
+<div>
+  <div
+    className="container"
+  >
+    <h2
+      className="align-text-top"
+    >
+      Get your 5 day Forecast
+    </h2>
+    <form
+      onSubmit={[Function]}
+    >
+      <div
+        className="form-group"
+      >
+        <label
+          htmlFor="City"
+        >
+          City
+        </label>
+        <input
+          className="form-control"
+          name="city"
+          placeholder="Enter your city"
+          type="text"
+        />
+      </div>
+      <div
+        className="form-group"
+      >
+        <label
+          htmlFor="country"
+        >
+          Country
+        </label>
+        <input
+          className="form-control"
+          name="country"
+          placeholder="Enter your country"
+          type="text"
+        />
+      </div>
+      <button
+        className="btn btn-primary btn-"
+      >
+        Get Current Weather
+      </button>
+    </form>
+  </div>
+  <div
+    className="container"
+  >
+    <table
+      className="table"
+    >
+      <thead>
+        <tr>
+          <th
+            scope="col"
+          >
+            Date/Time
+          </th>
+          <th
+            scope="col"
+          >
+            Temperature
+          </th>
+          <th
+            scope="col"
+          >
+            WeatherIcon
+          </th>
+        </tr>
+      </thead>
+      <tbody />
+    </table>
+  </div>
+</div>
+`;
