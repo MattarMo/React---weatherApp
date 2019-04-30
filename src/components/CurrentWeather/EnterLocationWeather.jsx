@@ -13,6 +13,7 @@ const EnterLocation = props => {
             type="text"
             name="city"
             placeholder="Enter your city"
+            autoFocus={true}
           />
         </div>
         <div className="form-group">

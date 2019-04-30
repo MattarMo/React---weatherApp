@@ -2,10 +2,11 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import EnterLocationWeather from './EnterLocationWeather.jsx';
 import DisplayWeather from './DisplayWeather.jsx';
+import { connect } from 'react-redux';
 
 const API_KEY = '3958ce557d2539d832f7953ea777aa82';
 
-export default class CurrentWeather extends Component {
+class CurrentWeather extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -68,3 +69,5 @@ export default class CurrentWeather extends Component {
     );
   }
 }
+
+export default connect()(CurrentWeather);
