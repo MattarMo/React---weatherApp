@@ -1,47 +1,15 @@
 import React, { Component } from 'react';
-import axios from 'axios';
 import EnterLocationForecast from './EnterLocationForecast.jsx';
 import DisplayForecast from './DisplayForecast.jsx';
+import { connect } from 'react-redux';
+import api from '../../api';
 
-const API_KEY = '3958ce557d2539d832f7953ea777aa82';
-
-export default class Forcast extends Component {
+class Forecast extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      title: 'Get your 5 day Forecast',
-      forecastData: [],
-      error: undefined
+      title: 'Get your 5 day Forecast'
     };
-
-    this.forecastGetWeatherCall = this.forecastGetWeatherCall.bind(this);
-  }
-
-  forecastGetWeatherCall(e) {
-    e.preventDefault();
-    const getCity = e.target.city.value;
-    const getCountry = e.target.country.value;
-    axios
-      .get(
-        `http://api.openweathermap.org/data/2.5/forecast?q=${getCity},${getCountry}&appid=${API_KEY}&units=Imperial`
-      )
-      .then(res => {
-        const weatherData = res.data;
-        console.log(weatherData);
-        this.setState({
-          title: 'Get your 5 day forecast',
-          forecastData: weatherData.list,
-          error: ''
-        });
-      })
-      .catch(() => {
-        this.setState({
-          title: 'Get your 5 day forecast',
-          forecastData: [],
-          error:
-            'Please enter a city and country(must be a real and matching city to country)'
-        });
-      });
   }
 
   render() {
@@ -49,13 +17,60 @@ export default class Forcast extends Component {
       <div>
         <EnterLocationForecast
           title={this.state.title}
-          forecastGetWeatherCall={this.forecastGetWeatherCall}
+          // eslint-disable-next-line react/prop-types
+          cityvalue={this.props.searchCity}
+          // eslint-disable-next-line react/prop-types
+          countryvalue={this.props.searchCountry}
+          // eslint-disable-next-line react/prop-types
+          inputchangecity={this.props.handleInputCityChange}
+          // eslint-disable-next-line react/prop-types
+          inputchangecountry={this.props.handleInputCountryChange}
+          // eslint-disable-next-line react/prop-types
+          getForecast={this.props.getForeCast}
         />
         <DisplayForecast
-          forecastData={this.state.forecastData}
-          error={this.state.error}
+          // eslint-disable-next-line react/prop-types
+          forecastData={this.props.forecastDataList}
+          // eslint-disable-next-line react/prop-types
+          error={this.props.error}
         />
       </div>
     );
   }
 }
+
+const mapStateToProps = state => {
+  return {
+    title: state.forecastTitle,
+    forecastDataList: state.forecastData,
+    error: state.error,
+    searchCity: state.searchForecastCityInput,
+    searchCountry: state.searchForecastCountryInput
+  };
+};
+
+const mapDispatchToProps = dispatch => {
+  return {
+    handleInputCityChange: e => {
+      dispatch({
+        type: 'SEARCH_FORECASTCITY_INPUT',
+        cityvalue: e.target.value
+      });
+    },
+    handleInputCountryChange: e => {
+      dispatch({
+        type: 'SEARCH_FORECASTCOUNTRY_INPUT',
+        countryvalue: e.target.value
+      });
+    },
+    getForeCast: (e, city, country) => {
+      e.preventDefault();
+      api.getForecast(dispatch, city, country);
+    }
+  };
+};
+
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(Forecast);

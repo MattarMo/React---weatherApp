@@ -37,7 +37,7 @@ const DisplayForecast = props => {
 };
 
 DisplayForecast.propTypes = {
-  forecastData: PropTypes.array.isRequired,
+  forecastData: PropTypes.array,
   error: PropTypes.string
 };
 
