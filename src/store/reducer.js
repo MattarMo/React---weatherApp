@@ -31,6 +31,23 @@ const reducer = (state = initalState, action) => {
       });
     case actionTypes.GET_FORECAST_FAIL:
       return Object.assign({}, state, { error: action.error });
+    case actionTypes.SEARCH_WEATHERCITY_INPUT:
+      return Object.assign({}, state, {
+        searchForecastCityInput: action.cityvalue
+      });
+    case actionTypes.SEARCH_WEATHERCOUNTRY_INPUT:
+      return Object.assign({}, state, {
+        searchForecastCountryInput: action.countryvalue
+      });
+    case actionTypes.GET_WEATHER_SUCCESS:
+      return Object.assign({}, state, {
+        temperature: action.payload.temperature,
+        description: action.payload.description,
+        icon: action.payload.icon,
+        error: ''
+      });
+    case actionTypes.GET_WEATHER_FAIL:
+      return Object.assign({}, state, { error: action.error });
     default:
       return state;
   }
