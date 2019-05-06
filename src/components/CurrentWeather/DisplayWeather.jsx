@@ -35,7 +35,7 @@ const DisplayWeather = props => {
 DisplayWeather.propTypes = {
   temperature: PropTypes.number,
   description: PropTypes.string,
-  icon: PropTypes.symbol,
+  icon: PropTypes.string,
   error: PropTypes.string
 };
 
