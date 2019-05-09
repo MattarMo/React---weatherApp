@@ -9,7 +9,7 @@ const DisplayForecast = props => {
         <thead>
           <tr>
             <th scope="col">Date/Time</th>
-            <th scope="col">Temperature</th>
+            <th scope="col">High/Low</th>
             <th scope="col">WeatherIcon</th>
           </tr>
         </thead>
@@ -18,7 +18,10 @@ const DisplayForecast = props => {
             return (
               <tr className="table" key={forecast.dt}>
                 <td>{forecast.dt_txt}</td>
-                <td>{forecast.main.temp}&deg;F</td>
+                <td>
+                  {forecast.main.temp_max}&deg;F | {forecast.main.temp_min}
+                  &deg;F
+                </td>
                 <td>
                   <img
                     src={`http://openweathermap.org/img/w/${

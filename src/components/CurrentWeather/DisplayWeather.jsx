@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import React from 'react';
 import PropTypes from 'prop-types';
 
@@ -8,9 +9,9 @@ const DisplayWeather = props => {
       <table className="table">
         <thead>
           <tr>
-            <th scope="col">Temperature</th>
-            <th scope="col">Description</th>
-            <th scope="col">WeatherIcon</th>
+            {props.temperature && <th scope="col">Current Temperature</th>}
+            {props.description && <th scope="col">Description</th>}
+            {props.icon && <th scope="col">WeatherIcon</th>}
           </tr>
         </thead>
         <tbody>

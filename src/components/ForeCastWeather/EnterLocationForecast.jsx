@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 const EnterLocationForecast = props => {
   return (
     <div className="container">
-      <h2 className="align-text-top">{props.title}</h2>
+      <h2 className="text-center">{props.title}</h2>
       <form
         onSubmit={e =>
           // eslint-disable-next-line react/prop-types
@@ -46,8 +46,8 @@ EnterLocationForecast.propTypes = {
   title: PropTypes.string.isRequired,
   inputchangecity: PropTypes.func,
   inputchangecountry: PropTypes.func,
-  //cityvalue: PropTypes.func,
-  //countryvalue: PropTypes.func,
+  cityvalue: PropTypes.func,
+  countryvalue: PropTypes.func,
   getForecast: PropTypes.func.isRequired
 };
 

@@ -38,9 +38,9 @@ class CurrentWeather extends Component {
 
 const mapStateToProps = state => {
   return {
-    temperature: undefined,
-    description: undefined,
-    icon: undefined,
+    temperature: state.temperature,
+    description: state.description,
+    icon: state.icon,
     error: state.error,
     searchCity: state.searchForecastCityInput,
     searchCountry: state.searchForecastCountryInput

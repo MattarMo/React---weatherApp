@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 const EnterLocation = props => {
   return (
     <div className="container">
-      <h2>{props.title}</h2>
+      <h2 className="text-center">{props.title}</h2>
       <form
         onSubmit={e =>
           // eslint-disable-next-line react/prop-types
